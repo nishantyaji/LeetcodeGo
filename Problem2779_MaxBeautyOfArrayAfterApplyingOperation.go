@@ -24,6 +24,8 @@ func maximumBeauty(nums []int, k int) int {
 }
 
 func main() {
-  var arr = [4]int{4,6,1,2}
+  var arr = []int{4,6,1,2}
   fmt.Println(maximumBeauty(arr, 2))  // 3
 }
+
+// Newbie self help: go run <filename>
