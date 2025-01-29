@@ -7,6 +7,7 @@ Example of standard algo/techniques
 | ------------- | ------------- |
 | accumulate | Problem2559_CountVowelStringsInRanges.go |
 | deque | Problem2415_ReverseOddLevelsOfBinTree.go |
+| Disjoint Set Union (DSU) | Problem0769_MaxChunksToMakeSorted.go |
 | heap | Problem2558_TakeGiftsFromRichestPile.go |
 | heap (with struct) | Problem3264_FinalArrayStateAfterKMultiplicationOpsI.go |
 | map | Problem2559_CountVowelStringsInRanges.go |
