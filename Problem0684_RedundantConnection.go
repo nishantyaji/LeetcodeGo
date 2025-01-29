@@ -48,32 +48,37 @@ func (uf UnionFind) Find(i int) int {
 }
 
 func findRedundantConnection(edges [][]int) []int {
-    mp := make(map[int]int)   
-    res := []int{-1, -1}
+	mp := make(map[int]int)
+	res := []int{-1, -1}
 
-    for _, edge := range edges {
-        mp[edge[0]] = 1
-        mp[edge[1]] = 1
-    }
-    n := len(mp)
-    mp = make(map[int]int)
-    uf := NewUnionFind(n)
-    for _, edge := range edges {
-        flag := true
-        if _, ok1 := mp[edge[0]]; ok1 {
-            if _, ok2 := mp[edge[1]]; ok2 {
-                if uf.Find(edge[0] - 1) == uf.Find(edge[1] - 1) {
-                    res[0] = edge[0]
-                    res[1] = edge[1]
-                    flag = false
-                }
-            }
-        }
-        if flag {
-            mp[edge[0]] = 1
-            mp[edge[1]] = 1
-            uf.Union(edge[0] - 1, edge[1] - 1)
-        }
-    }
-    return res
+	for _, edge := range edges {
+		mp[edge[0]] = 1
+		mp[edge[1]] = 1
+	}
+	n := len(mp)
+	mp = make(map[int]int)
+	uf := NewUnionFind(n)
+	for _, edge := range edges {
+		flag := true
+		if _, ok1 := mp[edge[0]]; ok1 {
+			if _, ok2 := mp[edge[1]]; ok2 {
+				if uf.Find(edge[0]-1) == uf.Find(edge[1]-1) {
+					res[0] = edge[0]
+					res[1] = edge[1]
+					flag = false
+				}
+			}
+		}
+		if flag {
+			mp[edge[0]] = 1
+			mp[edge[1]] = 1
+			uf.Union(edge[0]-1, edge[1]-1)
+		}
+	}
+	return res
+}
+
+func main() {
+
+	fmt.Println(findRedundantConnection([][]int{{9, 10}, {5, 8}, {2, 6}, {1, 5}, {3, 8}, {4, 9}, {8, 10}, {4, 10}, {6, 8}, {7, 9}}))
 }
