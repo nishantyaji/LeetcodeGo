@@ -6,6 +6,7 @@ Example of standard algo/techniques
 | Technique  | Script |
 | ------------- | ------------- |
 | accumulate | Problem2559_CountVowelStringsInRanges.go |
+| Character Counter | Problem1790_CheckIfOneStringSwapCanMakeStringsEqual.go |
 | deque | Problem2415_ReverseOddLevelsOfBinTree.go |
 | Disjoint Set Union (DSU) | Problem0769_MaxChunksToMakeSorted.go |
 | heap | Problem2558_TakeGiftsFromRichestPile.go |
