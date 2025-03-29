@@ -18,3 +18,9 @@ Example of standard algo/techniques
 | stack (with struct) | Problem2182_ConstructStringWithRepeatLimit.go |
 
 
+Example of Go techniques
+
+
+| Technique  | Script |
+| ------------- | ------------- |
+| string builder | Problem2182_ConstructStringWithRepeatLimit.go |
